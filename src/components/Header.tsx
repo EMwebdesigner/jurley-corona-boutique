@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Crown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import LogoImage from "@/assets/Logo.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -37,14 +38,18 @@ export const Header = () => {
         isScrolled ? "bg-card/95 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("#hero")}
             className="flex items-center gap-2 group"
           >
-            <Crown className="h-8 w-8 text-gold" />
+            <img 
+                src={LogoImage} 
+                alt="Logo Jurley Corona Boutique" 
+                className="h-16 w-16 object-contain" 
+            />
             <div className="text-left">
               <h1 className="text-xl font-bold text-gold leading-tight">Jurley Corona</h1>
               <p className="text-xs text-muted-foreground">Boutique</p>

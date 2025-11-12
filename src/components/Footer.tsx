@@ -1,4 +1,5 @@
-import { Crown, Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import LogoImage from "@/assets/Logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start mb-4">
-              <Crown className="h-8 w-8 text-gold" />
+              <img 
+                src={LogoImage} 
+                alt="Logo Jurley Corona Boutique" 
+                className="h-16 w-16 object-contain" 
+            />
               <div>
                 <h3 className="text-xl font-bold text-gold">Jurley Corona</h3>
                 <p className="text-xs text-muted-foreground">Boutique</p>
